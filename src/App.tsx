@@ -243,11 +243,6 @@ export default function App() {
     setMobilePane('chat');
   };
 
-  const handleLaunchDemoFromOverview = (id: string) => {
-    setMobilePane('chat');
-    playDemo(id);
-  };
-
   const handleVoiceNavigate = (view: 'overview' | 'inbox' | 'call') => {
     if (view === 'inbox') setMobilePane('inbox');
     setActiveView(view);
@@ -353,12 +348,10 @@ export default function App() {
         {activeView === 'overview' && (
           <Overview
             language={language}
-            conversations={conversations}
             onOpenInbox={() => {
               setMobilePane('inbox');
               setActiveView('inbox');
             }}
-            onLaunchDemo={handleLaunchDemoFromOverview}
             onOpenCallMode={openCallConsent}
           />
         )}

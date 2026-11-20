@@ -35,6 +35,13 @@ export interface TranslationBundle {
     guideKicker: string;
     guideTitle: string;
     guideSubtitle: string;
+    extraHelpTitle: string;
+    extraHelpBody: string;
+    extraHelpRead: string;
+    extraHelpStop: string;
+    extraHelpCheck: string;
+    extraHelpCall: string;
+    extraHelpReport: string;
     step1Tag: string;
     step1Title: string;
     step1Body: string;
@@ -252,6 +259,14 @@ export const TRANSLATIONS: Record<AppLanguage, TranslationBundle> = {
       guideKicker: 'Visual Safety Guide',
       guideTitle: '3 simple steps to stay safe',
       guideSubtitle: 'Watch for these 3 warning signs. If unsure, stop and check.',
+      extraHelpTitle: 'Need more help? It is okay to pause.',
+      extraHelpBody:
+        'Scams can target anyone. Take your time, ask someone you trust, and never share an OTP or send money because someone is rushing you.',
+      extraHelpRead: 'Hear the safety steps',
+      extraHelpStop: 'Stop reading',
+      extraHelpCheck: 'Check a message',
+      extraHelpCall: 'Call helpline 1930',
+      extraHelpReport: 'Report online',
       step1Tag: '1. Someone contacts you',
       step1Title: 'They pretend to be someone you trust',
       step1Body:
@@ -569,6 +584,14 @@ export const TRANSLATIONS: Record<AppLanguage, TranslationBundle> = {
       guideKicker: 'सरल सुरक्षा गाइड',
       guideTitle: 'सुरक्षित रहने के 3 आसान तरीके',
       guideSubtitle: 'इन 3 संकेतों को देखें। शक हो तो रुकें और जाँचें।',
+      extraHelpTitle: 'और मदद चाहिए? रुकना ठीक है।',
+      extraHelpBody:
+        'धोखाधड़ी किसी के साथ हो सकती है। आराम से सोचें, किसी भरोसेमंद व्यक्ति से पूछें और जल्दबाज़ी में OTP न बताएं या पैसे न भेजें।',
+      extraHelpRead: 'सुरक्षा के तरीके सुनें',
+      extraHelpStop: 'पढ़ना रोकें',
+      extraHelpCheck: 'मैसेज जांचें',
+      extraHelpCall: 'हेल्पलाइन 1930 पर कॉल करें',
+      extraHelpReport: 'ऑनलाइन शिकायत करें',
       step1Tag: '1. कोई अनजान व्यक्ति संपर्क करे',
       step1Title: 'वह भरोसेमंद बनकर बात करता है',
       step1Body:
@@ -879,6 +902,14 @@ export const TRANSLATIONS: Record<AppLanguage, TranslationBundle> = {
       guideKicker: 'Asaan Safety Guide',
       guideTitle: 'Safe rehne ke 3 simple steps',
       guideSubtitle: 'Yeh 3 warning signs dekhein. Shak ho to ruk kar check karein.',
+      extraHelpTitle: 'Aur madad chahiye? Rukna bilkul theek hai.',
+      extraHelpBody:
+        'Scam kisi ke saath bhi ho sakta hai. Aaram se sochein, kisi bharosemand se poochhein, aur jaldi mein OTP ya paise share na karein.',
+      extraHelpRead: 'Safety steps sunein',
+      extraHelpStop: 'Padhna rokein',
+      extraHelpCheck: 'Message check karein',
+      extraHelpCall: 'Helpline 1930 par call karein',
+      extraHelpReport: 'Online report karein',
       step1Tag: '1. Koi anjaan contact kare',
       step1Title: 'Woh bharosemand bankar baat karte hain',
       step1Body:
@@ -1189,6 +1220,14 @@ export const TRANSLATIONS: Record<AppLanguage, TranslationBundle> = {
       guideKicker: 'సులభ భద్రతా మార్గదర్శి',
       guideTitle: 'సురక్షితంగా ఉండటానికి 3 సులభమైన మార్గాలు',
       guideSubtitle: 'ఈ 3 హెచ్చరిక సంకేతాలను గుర్తించండి. అనుమానం ఉంటే ఆగి తనిఖీ చేయండి.',
+      extraHelpTitle: 'మరింత సహాయం కావాలా? ఆగడం మంచిదే.',
+      extraHelpBody:
+        'ఎవరైనా మోసానికి గురి కావచ్చు. తొందరపడకండి, నమ్మకమైన వ్యక్తిని అడగండి. ఒత్తిడి చేస్తున్నారని OTP చెప్పకండి లేదా డబ్బు పంపకండి.',
+      extraHelpRead: 'భద్రతా సూచనలు వినండి',
+      extraHelpStop: 'చదవడం ఆపండి',
+      extraHelpCheck: 'సందేశాన్ని తనిఖీ చేయండి',
+      extraHelpCall: 'హెల్ప్‌లైన్ 1930కు కాల్ చేయండి',
+      extraHelpReport: 'ఆన్‌లైన్‌లో ఫిర్యాదు చేయండి',
       step1Tag: '1. అపరిచితులు మిమ్మల్ని సంప్రదిస్తారు',
       step1Title: 'నమ్మకమైన వ్యక్తిలా నటిస్తారు',
       step1Body:
@@ -1499,6 +1538,14 @@ export const TRANSLATIONS: Record<AppLanguage, TranslationBundle> = {
       guideKicker: 'सोपी सुरक्षा मार्गदर्शिका',
       guideTitle: 'सुरक्षित राहण्याचे ३ सोपे मार्ग',
       guideSubtitle: 'या ३ धोक्याच्या खुणा ओळखा. शंका असल्यास थांबा आणि तपासा.',
+      extraHelpTitle: 'अधिक मदत हवी आहे? थांबणे योग्य आहे.',
+      extraHelpBody:
+        'फसवणूक कोणासोबतही होऊ शकते. वेळ घ्या, विश्वासू व्यक्तीला विचारा आणि घाईत OTP सांगू नका किंवा पैसे पाठवू नका.',
+      extraHelpRead: 'सुरक्षेच्या सूचना ऐका',
+      extraHelpStop: 'वाचणे थांबवा',
+      extraHelpCheck: 'मेसेज तपासा',
+      extraHelpCall: 'हेल्पलाइन १९३० वर कॉल करा',
+      extraHelpReport: 'ऑनलाइन तक्रार करा',
       step1Tag: '१. अनोळखी व्यक्ती संपर्क करते',
       step1Title: 'ती विश्वासू व्यक्ती असल्याचे भासवते',
       step1Body:

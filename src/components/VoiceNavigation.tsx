@@ -56,6 +56,11 @@ const VOICE_COPY: Record<
     ready: string;
     unsupported: string;
     retry: string;
+    listening: string;
+    noSpeech: string;
+    permission: string;
+    microphone: string;
+    network: string;
     stopped: string;
     heard: string;
     hint: string;
@@ -72,6 +77,11 @@ const VOICE_COPY: Record<
     ready: 'Voice navigation is ready. Say Help to hear page commands.',
     unsupported: 'Voice navigation is not supported in this browser. Please use Chrome or Edge.',
     retry: 'Voice listening stopped. Tap the microphone and try again.',
+    listening: 'Listening. Say one command, such as “Open Messages”.',
+    noSpeech: 'I did not hear anything. Tap the microphone and try again.',
+    permission: 'Microphone access is blocked. Allow it in your browser settings, then try again.',
+    microphone: 'No microphone was found. Connect or enable a microphone, then try again.',
+    network: 'The browser voice service is unavailable. Check your connection and try again.',
     stopped: 'Voice listening stopped.',
     heard: 'Heard',
     hint: 'Tap the microphone, then say: “Go to Home”, “Open Messages”, or “Call mode”.',
@@ -87,6 +97,11 @@ const VOICE_COPY: Record<
     ready: 'आवाज़ से नेविगेशन तैयार है। पृष्ठ के आदेश सुनने के लिए मदद कहें।',
     unsupported: 'इस ब्राउज़र में आवाज़ से नेविगेशन उपलब्ध नहीं है। Chrome या Edge इस्तेमाल करें।',
     retry: 'आवाज़ सुनना रुक गया। माइक्रोफ़ोन दबाकर फिर कोशिश करें।',
+    listening: 'सुन रहा हूँ। एक आदेश कहें, जैसे “संदेश खोलो”।',
+    noSpeech: 'आवाज़ सुनाई नहीं दी। माइक्रोफ़ोन दबाकर फिर कोशिश करें।',
+    permission: 'माइक्रोफ़ोन की अनुमति बंद है। ब्राउज़र सेटिंग में अनुमति दें और फिर कोशिश करें।',
+    microphone: 'माइक्रोफ़ोन नहीं मिला। माइक्रोफ़ोन चालू करके फिर कोशिश करें।',
+    network: 'ब्राउज़र की आवाज़ सेवा उपलब्ध नहीं है। इंटरनेट जाँचकर फिर कोशिश करें।',
     stopped: 'आवाज़ सुनना बंद है।',
     heard: 'आपने कहा',
     hint: 'माइक्रोफ़ोन दबाएँ और कहें: “घर खोलो”, “संदेश खोलो”, या “कॉल मोड”.',
@@ -102,6 +117,11 @@ const VOICE_COPY: Record<
     ready: 'Voice navigation ready hai. Page commands sunne ke liye Help boliye.',
     unsupported: 'Is browser mein voice navigation nahi chalta. Chrome ya Edge use karein.',
     retry: 'Voice sunna ruk gaya. Microphone dabakar phir koshish karein.',
+    listening: 'Sun raha hoon. Ek command boliye, jaise “Messages kholo”.',
+    noSpeech: 'Awaaz sunai nahi di. Microphone dabakar phir koshish karein.',
+    permission: 'Microphone permission band hai. Browser settings mein allow karke phir try karein.',
+    microphone: 'Microphone nahi mila. Microphone connect ya on karke phir try karein.',
+    network: 'Browser ki voice service available nahi hai. Internet check karke phir try karein.',
     stopped: 'Voice sunna band hai.',
     heard: 'Aapne kaha',
     hint: 'Microphone dabayein, phir bolein: “Home kholo”, “Messages kholo”, ya “Call mode”.',
@@ -117,6 +137,11 @@ const VOICE_COPY: Record<
     ready: 'వాయిస్ నావిగేషన్ సిద్ధంగా ఉంది. పేజీ ఆదేశాల కోసం సహాయం అని చెప్పండి.',
     unsupported: 'ఈ బ్రౌజర్‌లో వాయిస్ నావిగేషన్ లేదు. Chrome లేదా Edge ఉపయోగించండి.',
     retry: 'వాయిస్ వినడం ఆగింది. మైక్రోఫోన్ నొక్కి మళ్లీ ప్రయత్నించండి.',
+    listening: 'వింటున్నాను. “సందేశాలు తెరువు” వంటి ఒక ఆదేశం చెప్పండి.',
+    noSpeech: 'ఏమీ వినిపించలేదు. మైక్రోఫోన్ నొక్కి మళ్లీ ప్రయత్నించండి.',
+    permission: 'మైక్రోఫోన్ అనుమతి లేదు. బ్రౌజర్ సెట్టింగ్‌లలో అనుమతించి మళ్లీ ప్రయత్నించండి.',
+    microphone: 'మైక్రోఫోన్ కనబడలేదు. మైక్రోఫోన్‌ను కనెక్ట్ చేసి లేదా ఆన్ చేసి మళ్లీ ప్రయత్నించండి.',
+    network: 'బ్రౌజర్ వాయిస్ సేవ అందుబాటులో లేదు. ఇంటర్నెట్ తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.',
     stopped: 'వాయిస్ వినడం ఆగింది.',
     heard: 'మీరు చెప్పింది',
     hint: 'మైక్రోఫోన్ నొక్కి ఇలా చెప్పండి: “హోమ్ తెరువు”, “సందేశాలు తెరువు”, లేదా “కాల్ మోడ్”.',
@@ -132,6 +157,11 @@ const VOICE_COPY: Record<
     ready: 'आवाजाद्वारे नेव्हिगेशन तयार आहे. पानांची आज्ञा ऐकण्यासाठी मदत म्हणा.',
     unsupported: 'या ब्राउझरमध्ये आवाजाद्वारे नेव्हिगेशन उपलब्ध नाही. Chrome किंवा Edge वापरा.',
     retry: 'आवाज ऐकणे थांबले. मायक्रोफोन दाबून पुन्हा प्रयत्न करा.',
+    listening: 'ऐकत आहे. “संदेश उघडा” यांसारखी एक आज्ञा सांगा.',
+    noSpeech: 'काही ऐकू आले नाही. मायक्रोफोन दाबून पुन्हा प्रयत्न करा.',
+    permission: 'मायक्रोफोनची परवानगी बंद आहे. ब्राउझर सेटिंग्जमध्ये परवानगी द्या आणि पुन्हा प्रयत्न करा.',
+    microphone: 'मायक्रोफोन सापडला नाही. मायक्रोफोन सुरू करून पुन्हा प्रयत्न करा.',
+    network: 'ब्राउझरची आवाज सेवा उपलब्ध नाही. इंटरनेट तपासून पुन्हा प्रयत्न करा.',
     stopped: 'आवाज ऐकणे बंद आहे.',
     heard: 'तुम्ही म्हणालात',
     hint: 'मायक्रोफोन दाबा आणि म्हणा: “मुख्यपृष्ठ उघडा”, “संदेश उघडा” किंवा “कॉल मोड”.',
@@ -156,6 +186,10 @@ export function VoiceNavigation({
   const [listening, setListening] = useState(false);
   const [status, setStatus] = useState('');
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
+  const recognitionActiveRef = useRef(false);
+  const pendingCommandRef = useRef('');
+  const recognitionFailedRef = useRef(false);
+  const manualStopRef = useRef(false);
   const copy = VOICE_COPY[language];
   const pageName = VIEW_LABELS[activeView][language];
 
@@ -237,7 +271,6 @@ export function VoiceNavigation({
                 : `You are on ${pageName}.`
       );
     } else if (intent.type === 'stop') {
-      recognitionRef.current?.stop();
       setStatus(copy.stopped);
     } else if (intent.type === 'clarify') {
       announce(copy.clarify);
@@ -249,6 +282,7 @@ export function VoiceNavigation({
   };
 
   const startListening = () => {
+    if (recognitionActiveRef.current) return;
     const recognition = getRecognition();
     if (!recognition) {
       announce(copy.unsupported);
@@ -256,36 +290,71 @@ export function VoiceNavigation({
     }
 
     stopSpeaking();
+    pendingCommandRef.current = '';
+    recognitionFailedRef.current = false;
+    manualStopRef.current = false;
     recognition.lang = LOCALE[language];
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.onresult = (event) => {
       const result = event.results[0]?.[0]?.transcript;
       if (result) {
+        pendingCommandRef.current = result;
         setStatus(`${copy.heard}: ${result}`);
-        runCommand(result);
+        recognition.stop();
       }
     };
     recognition.onerror = (event) => {
       setListening(false);
-      if (event.error !== 'aborted') {
-        announce(copy.retry);
+      recognitionFailedRef.current = true;
+      if (event.error === 'aborted') {
+        if (!manualStopRef.current && !pendingCommandRef.current) {
+          setStatus(copy.retry);
+        }
+      } else {
+        const message =
+          event.error === 'no-speech'
+            ? copy.noSpeech
+            : event.error === 'not-allowed' || event.error === 'service-not-allowed'
+              ? copy.permission
+              : event.error === 'audio-capture'
+                ? copy.microphone
+                : event.error === 'network'
+                  ? copy.network
+                  : copy.retry;
+        setStatus(message);
       }
     };
-    recognition.onend = () => setListening(false);
+    recognition.onend = () => {
+      recognitionActiveRef.current = false;
+      setListening(false);
+      const command = pendingCommandRef.current;
+      pendingCommandRef.current = '';
+      if (command) {
+        runCommand(command);
+      } else if (!recognitionFailedRef.current && !manualStopRef.current) {
+        setStatus(copy.noSpeech);
+      }
+      recognitionFailedRef.current = false;
+      manualStopRef.current = false;
+    };
 
     try {
+      recognitionActiveRef.current = true;
       recognition.start();
       setListening(true);
-      announce(copy.ready);
+      setStatus(copy.listening);
     } catch {
+      recognitionActiveRef.current = false;
       setListening(false);
-      announce(copy.ready);
+      setStatus(copy.retry);
     }
   };
 
   const toggleListening = () => {
-    if (listening) {
+    if (listening || recognitionActiveRef.current) {
+      manualStopRef.current = true;
+      pendingCommandRef.current = '';
       recognitionRef.current?.stop();
       setListening(false);
       setStatus(copy.stopped);
@@ -300,6 +369,8 @@ export function VoiceNavigation({
         <button
           type="button"
           onClick={() => announce(status)}
+          disabled={listening}
+          aria-live="polite"
           className="max-w-[260px] rounded-xl border border-blue-200 bg-white px-3 py-2 text-right text-xs font-medium text-slate-700 shadow-lg dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
         >
           <span className="flex items-center gap-1.5">
