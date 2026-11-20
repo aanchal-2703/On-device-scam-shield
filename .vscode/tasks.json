@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "ScamShield validation (lint and build)",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run lint && npm run build"
+			],
+			"isBackground": false
+		}
+	]
+}

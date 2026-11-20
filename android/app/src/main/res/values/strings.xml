@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ScamShield</string>
+    <string name="title_activity_main">ScamShield</string>
+    <string name="package_name">io.github.aanchal2703.scamshield</string>
+    <string name="custom_url_scheme">io.github.aanchal2703.scamshield</string>
+    <string name="screen_capture_service_description">Read visible text in other apps only after you enable this service, so ScamShield can check it for scam signs on this device. Captured text is not uploaded.</string>
+</resources>

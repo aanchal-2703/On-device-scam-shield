@@ -1,0 +1,6 @@
+{
+  "name": "ScamShield",
+  "description": "Privacy-first on-device scam and manipulation sequence detector running 100% locally in the browser.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
